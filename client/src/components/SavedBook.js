@@ -1,6 +1,6 @@
 function SavedBook(props) {
     return (
-      <div className="card">
+      <div className="card" data={props.id}>
         <div className="card-header">
           <p className="card-header-title title is-4">{props.title}</p>
         </div>
@@ -8,12 +8,12 @@ function SavedBook(props) {
           <div className="media-content">
             <div className="columns">
               <div className="column is-four-fifths">
-                <p className="mb-3">Written by:{props.author}</p>
+                <p className="mb-3">Written by:{props.authors}</p>
               </div>
               <div className="column">
                 <div className="field is-grouped is-flex is-justify-content-flex-end">
                   <div className="control">
-                    <a className="button is-info">View Info</a>
+                    <a className="button is-info" href={props.link}>View Info</a>
                   </div>
                   <div className="control">
                     <a className="button is-info">Delete</a>

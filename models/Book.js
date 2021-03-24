@@ -8,9 +8,8 @@ const bookSchema = new Schema({
         trim: true,
         required: "You must enter a title"
     },
-    author: {
-        type: String,
-        trim: true,
+    authors: {
+        type: Array,
         required: "You must enter an author"
     },
     description: {

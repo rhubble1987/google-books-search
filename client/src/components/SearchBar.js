@@ -1,19 +1,20 @@
-function SearchBar() {
+function SearchBar(props) {
     return (
     <div className="box has-background-info m-5">
       <div className="field">
-        <label class="label is-large has-text-white">Book Search</label>
-        <div class="control is-large">
+        <label className="label is-large has-text-white">Book Search</label>
+        <div className="control is-large">
           <input
-            class="input is-large"
+            className="input is-large"
             type="text"
             placeholder="Search for a book"
+            id="search-query"
           />
         </div>
       </div>
-      <div class="field is-flex is-justify-content-flex-end">
-        <div class="control">
-          <button id="book-search" class="button is-medium">
+      <div className="field is-flex is-justify-content-flex-end">
+        <div className="control">
+          <button onClick={props.setSearchTerms(document.getElementById("search-query".value))} id="book-search" className="button is-medium">
             Search
           </button>
         </div>
